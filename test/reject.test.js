@@ -18,4 +18,10 @@ describe('reject()', () => {
     const orderItems = _.reject(order, (value) => value === null);
     expect(orderItems).toEqual(['burger', 'ketchup', 'cookie']);
   });
+
+  it('rejects only the exact string, not substrings, from an array', () => {
+    const arr = ['rockstar', 'rock', 'ro'];
+    const rejectedArr = _.reject(arr, item => item === 'ro');
+    expect(rejectedArr).toEqual(['rockstar', 'rock']);
+  });
 });

@@ -17,5 +17,9 @@ describe('every()', () => {
       expect(_.every(nums, num => num % 2 === 1)).toBe(false);
     });
 
+    it('returns false for comparing strings that may match it\'s substring', () => {
+      const words = ['apple', 'app', 'appl']
+      expect(_.every(words, word => word === 'app')).toBe(false);
+    });
   });
 });

@@ -5,7 +5,7 @@ describe('each()', () => {
     const arr = ['a', 'b', 'c'];
     let count = 0;
     _.each(arr, function(element, index, array) {
-      expect(element).toEqual(array[index]);
+      console.log(expect(element).toEqual(array[index]));
       count += 1;
     });
     expect(count).toBe(3);
@@ -38,6 +38,19 @@ describe('each()', () => {
       count += 1;
     });
     expect(count).toBe(3);
+  });
+
+  it('iterates every element of an array, passing that element, index, and object to the callback', () => {
+    const arrBefore = ['a', 'b', 'c'];
+    const arrIndexBefore = [0, 1, 2];
+    const arrAfter = [];
+    const arrIndexAfter = [];
+    _.each(arrBefore, function(element, index, array) {
+      arrAfter.push(element);
+      arrIndexAfter.push(index);
+    });
+    expect(arrBefore).toEqual(arrAfter);
+    expect(arrIndexBefore).toEqual(arrIndexAfter);
   });
 });
 

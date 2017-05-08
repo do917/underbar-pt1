@@ -13,4 +13,9 @@ describe('reduce()', () => {
     expect(result).toEqual(15);
   });
 
+  it('reduces an array to the last item', () => {
+    const arr = ['a', 'b', 'last item'];
+    const result = _.reduce(arr, (a, b) => b);
+    expect(result).toEqual('last item');
+  });
 });

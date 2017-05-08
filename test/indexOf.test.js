@@ -26,4 +26,8 @@ describe('indexOf()', () => {
     expect(_.indexOf(arr, 'bar', 2)).toBe(3);
   });
 
+  it('returns -1 even if target exists, when target is before the given offset', () => {
+    const arr = ['a', 'd', 'e', 'f', 'g'];
+    expect(_.indexOf(arr, 'a', 1)).toBe(-1);
+  });
 });

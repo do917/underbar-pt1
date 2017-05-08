@@ -18,4 +18,8 @@ describe('isArrayLike()', () => {
     };
     expect(_.isArrayLike(nonArrayLikeObj)).toBe(false);
   });
+
+  it('returns true even if the given array is empty', () => {
+    expect(_.isArrayLike([])).toBe(true);
+  });
 });

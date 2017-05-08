@@ -11,4 +11,8 @@ describe('some()', () => {
     expect(_.some(nums, num => num % 2 === 1)).toBe(false);
   });
 
+  it('returns true if any string matches target', () => {
+    const arr = ['iphone', 'galaxy', 'oneplus'];
+    expect(_.some(arr, item => item === 'iphone')).toEqual(true);
+  });
 });

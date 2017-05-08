@@ -31,4 +31,7 @@ describe('contains()', () => {
     expect(_.contains(ponies, 'Applejack')).toBe(false);
   });
 
+  it('returns false if an array is empty', () => {
+    expect(_.contains([], 7)).toBe(false);
+  });
 });

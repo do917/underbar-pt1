@@ -6,4 +6,10 @@ describe('map()', () => {
     const mappedArr = _.map(arr, (el) => el * el);
     expect(mappedArr).toEqual([1, 4, 9, 16, 25]);
   });
+
+  it('maps through an array\'s indexes', () => {
+    const arr = ['a', 'b', 'c'];
+    const mappedArr = _.map(arr, (item, index) => index);
+    expect(mappedArr).toEqual([0, 1, 2]);
+  });
 });

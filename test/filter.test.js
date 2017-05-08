@@ -23,4 +23,9 @@ describe('filter()', () => {
     const abilityScores = _.filter(characterAttributes, (value) => !isNaN(value));
     expect(abilityScores).toEqual([4, 7, 10, 16, 5, 4]);
   });
+
+  it('filters an array to object with a true value', () => {
+    const randomStuff = [true, false, 1, 0, 'word']
+    expect(randomStuff.filter(item => !!item === true )).toEqual([true, 1, 'word']);
+  });
 });
