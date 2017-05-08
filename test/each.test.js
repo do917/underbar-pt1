@@ -5,7 +5,7 @@ describe('each()', () => {
     const arr = ['a', 'b', 'c'];
     let count = 0;
     _.each(arr, function(element, index, array) {
-      console.log(expect(element).toEqual(array[index]));
+      expect(element).toEqual(array[index]);
       count += 1;
     });
     expect(count).toBe(3);
